@@ -10,7 +10,9 @@
   },
   "scripts": {
     "watch": "tsc -w",
-    "dev": "nodemon .\\dist\\index.js"
+    "dev": "nodemon .\\dist\\index.js",
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
