@@ -1,8 +1,12 @@
 import express from 'express'
+import cors from 'cors'
 
 const app = express()
+
+const corsMiddleWare = cors()
 const jsonBodyMiddleware = express.json()
 
+app.use(corsMiddleWare)
 app.use(jsonBodyMiddleware)
 
 const port = process.env.PORT || 3000
@@ -17,7 +21,7 @@ const db = {
 }
 
 app.get('/', (req, res) => {
-  res.json({test: 'test'})
+  res.send('HELLO WORLD')
 })
 
 app.get('/courses', (req, res) => {
